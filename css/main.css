@@ -1,0 +1,198 @@
+@import "all.css";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+    list-style-type: none;
+}
+:is(#header,#headtext,#joinbutton,#footer) :is(a,h2,h1,button,p){
+    color: whitesmoke;
+    text-decoration: none;   
+}
+#header{
+    background-image: url("../images/header.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+#header h2{
+    padding:30px 70px;
+    font-weight: normal;
+}
+#header ul{
+    display: flex;
+    margin-top: -65px;
+    justify-content: flex-end;
+    margin-right: 100px;
+}
+#header ul li{
+    padding: 15px;
+}
+#headtext{
+    justify-content: center;
+    height: 75vh;
+}
+#headtext,.ourworktext,.featurestext,.jointext{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#headtext h1{
+    font-size: 60px;
+    padding-bottom: 20px;
+}
+#headtext h2{
+    padding: 0px;
+    padding-bottom: 40px;
+}
+:is(#headtext,#joinbutton) button{
+    width: 250px;
+    height: 50px;
+    background-color: deepskyblue;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size: 16px;
+}
+#headtext button:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+:is(.ourworktext,.featurestext,#what,.jointext) h2{
+    color: #414a4f;
+    font-size: 32px;
+    padding-top: 100px;
+}
+:is(.ourworktext,.featurestext,.jointext) p{
+    line-height: 2;
+    text-align: center;
+    padding-top: 30px;
+    color:#555555;
+}
+:is(.ourworktext,.featurestext,.jointext) hr{
+    width: 150px;
+    border: 2px solid #2196f3;
+    margin-top: 30px;
+}
+.imagegallery1,.imagegallery2,.featuresservices{
+    display: grid;
+    grid-column-gap: 40px;
+    justify-content: center;
+}
+.imagegallery1{
+    grid-template-rows: 300px;
+    grid-template-columns:450px 750px;
+    grid-template-areas: "img1 img2";
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+.imagegallery2{
+    grid-template-rows: 250px;
+    grid-template-columns:750px 450px;
+    grid-template-areas: "img3 img4";
+}
+.img1{
+    grid-area: img1;
+    background-image: url("../images/ourwork1.jpg");  
+}
+.img2{
+    grid-area: img2;
+    background-image: url("../images/ourwork2.jpg");
+}
+.img3{
+    grid-area: img3;
+    background-image: url("../images/ourwork3.jpg");
+}
+.img4{
+    grid-area: img4;
+    background-image: url("../images/ourwork4.jpg");
+}
+.img1,.img2,.img3,.img4{
+    background-position: center;
+    background-size: cover;
+}
+#features{
+    margin-top: 100px;
+}
+#features,#join{
+    background-color:#f7f7f7;
+}
+.featuresservices{
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 400px);
+    margin-top: 80px;
+    padding-bottom: 100px;
+    grid-template-areas: "service1 service2 service3"
+}
+.service1{
+    grid-area: service1;
+}
+.service2{
+    grid-area: service2;
+}
+.service3{
+    grid-area: service3;
+}
+:is(.service1,.service2,.service3) h1,h3,p{
+    color: #414a4f;
+    text-align: center;
+}
+:is(.service1,.service2,.service3) p{
+    padding: 0px 15px;
+    padding-top: 20px;
+    color: #555555;
+    line-height: 1.7;
+}
+:is(.service1,.service2,.service3) h1{
+    padding-bottom: 20px;
+    font-size: 45px;
+    color: #2196f3;
+}
+#what{
+    padding-bottom: 50px;
+}
+#what h2{
+    text-align: center;
+    padding-bottom: 30px;
+}
+#what p{
+    color: #555555;
+    line-height: 1.5;
+    font-size: 22px;
+    padding-bottom: 50px;
+}
+#joinbutton{
+    display: flex;
+    padding-bottom: 100px;
+    justify-content: center;
+    margin-top: 50px;
+}
+#joinbutton input{
+    width: 450px;
+    height: 50px;
+    font-size: 16px;
+    padding-left: 10px;
+    margin-right: 25px;
+}
+#joinbutton button:hover{
+    background-color: #414a4f;    
+}
+#footer{
+    background-color:#414a4f;
+}
+#footer nav a{
+    font-size: 35px;
+}
+#footer nav ul{
+    display: flex;
+    justify-content: center;
+}
+#footer nav li{
+    margin-top: 30px;
+    padding: 20px 10px;
+}
+#footer p{
+    padding-bottom: 50px;
+}
